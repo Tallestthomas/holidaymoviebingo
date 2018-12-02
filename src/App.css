@@ -1,32 +1,52 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  margin: 0 auto;
+  max-width: 90vw;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+h1 {
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-align: center;
+}
+
+.square-container {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 70vh;
+}
+
+.square {
+  border: 1px solid black;
+  display: flex;
+  width: 19%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.square.selected {
+  background: url("./Snowflake.svg") no-repeat center center;
+  background-size: contain;
+
+  color: #008000;
+  text-shadow: 1px 1px white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img { 
+  transform: rotate(-90deg);
+  max-width:500px;
+  max-height:25vh;
+  display: block;
+  margin: 0 auto;
 }
