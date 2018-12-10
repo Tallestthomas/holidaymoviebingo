@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Square from './Square';
+import Square from './components/Square';
 
 class App extends Component {
   state = {
@@ -50,7 +50,23 @@ class App extends Component {
       "Extravagent holiday food display",
       "Main characters \"bump into\" each other in the beginning",
     ],
-    squaresToRender: []
+    squaresToRender: [],
+    selectedSquares: [12],
+    winCons: [
+      [0, 1, 2, 3, 4],
+      [5, 6, 7, 8, 9],
+      [10, 11, 12, 13, 14],
+      [15, 16, 17, 18, 19],
+      [20, 21, 22, 23, 24],
+      [0, 6, 12, 18, 24],
+      [4, 8, 12, 16, 20],
+      [0, 5, 10, 15, 20],
+      [1, 6, 11, 16, 21],
+      [2, 7, 12, 17, 22],
+      [3, 8, 13, 18, 23],
+      [4, 9, 14, 19, 24]
+    ],
+    winner: false
   }
 
 
@@ -60,22 +76,46 @@ class App extends Component {
 
   sanitizeArray = (array)  => Array.from(new Set(array))
 
+  selectSquare = (index) => {
+    const array = this.state.selectedSquares;
+    const indexOfSquare = array.indexOf(index);
+    if(indexOfSquare === -1){
+      array.push(index);
+      this.setState({...this.state.selectedSquares, selectedSquares: array})
+    } else {
+      this.setState({selectedSquares: this.state.selectedSquares.filter((_, i) => i !== indexOfSquare)});
+    }
+    this.checkForWin();
+  }
 
   componentDidMount(){
     this.shuffleArray(this.state.squares);
+  }
+
+  checkForWin = () => {
+    const res = this.state.winCons.filter(v => v.filter(c => {
+      return this.state.selectedSquares.indexOf(c) > -1
+    }).length === 5)
+    if(res.length === 1){
+      this.setState({winner: true})
+    }
   }
 
   render() {
     return(
       <div className="app">
         <img src={require("./image.png")} alt="logo" />
+        <button onClick={() => this.shuffleArray(this.state.squares)}>Click here for new squares</button>
         {this.state.squaresToRender ?
         <div className="square-container">
           { this.state.squaresToRender.map((square, index) => {
-            if( index === 12 )
-              return <div className="square selected">Free Space</div>
-                if(index < 25)
-              return <Square>{square}</Square>
+            if( index === 12 ){
+              return <div key="free" className="square selected">Free Space</div>
+            }
+            else if(index < 25){
+              return <Square key={square} onClick={() => this.selectSquare(index)}>{square}</Square>
+            }
+            return null;
           }) }
         </div>
             :

@@ -8,7 +8,10 @@ class Square extends React.Component {
   render() {
     return(
       <div className={`square ${this.state.selected ? 'selected' : ''}`}
-        onClick={() => this.setState({selected: !this.state.selected})}
+        onClick={() => {
+          this.props.onClick(); 
+          this.setState({selected: !this.state.selected});
+        }}
       >
         {this.props.children}
       </div>
