@@ -5,6 +5,13 @@ import Square from './Square';
 class App extends Component {
   state = {
     squares:[
+<<<<<<< HEAD
+      "First kiss interrupted",
+      "Fall in love within a week",
+      "Horse drawn carriage/sleigh",
+      "Gets dumped in beginning of the movie",
+      "Town Christmas festival",
+=======
       "Anti-Christmas character",
       "Blatant product placement", 
       "Christmas beret",
@@ -13,6 +20,18 @@ class App extends Component {
 >>>>>>> 8c38b2b1d1a7538ec95fb64bedc18fd995ef90e2
       "Company holiday party",
       "Cookie baking",
+<<<<<<< HEAD
+      "Blatant product placement", 
+      "Someone with a holiday themed name",
+      "\"Accidental\" fall that requires help up",
+      "Terribly bad fake CGI snow",
+      "Workaholic",
+      "Works at marketing agency",
+      "Works at design firm",
+      "Main characters don't like each other at first",
+      "Christmas Carolers",
+=======
+>>>>>>> 8c38b2b1d1a7538ec95fb64bedc18fd995ef90e2
       "Crazy snowstorm that shuts down travel",
       "Christmas tree shopping",
       "Elderly advice ",
@@ -43,6 +62,21 @@ class App extends Component {
       "Tree decorating",
       "Trying to come clean gets interrupted", 
       "Turning down job for love",
+<<<<<<< HEAD
+      "Ice Skating",
+      "Terrible Acting",
+      "Special Ornament Story",
+      "Cutting down a Christmas Tree",
+      "Tree Decorating",
+      "From a small town",
+      "Anti-Christmas Character",
+      "Ex drama",
+      "Family property or business in trouble",
+      "Drinking hot chocolate",
+      `Someone says 'It's a date'`,
+      "Christmas magic"
+
+=======
       "Unintentional hand holding",
       "Workaholic",
       "\"Accidental\" fall that requires help up",
@@ -50,6 +84,7 @@ class App extends Component {
       "Almost marries obviously wrong person",
       "Extravagent holiday food display",
       "Main characters \"bump into\" each other in the beginning",
+>>>>>>> 8c38b2b1d1a7538ec95fb64bedc18fd995ef90e2
     ],
     squaresToRender: []
   }
