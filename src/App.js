@@ -7,15 +7,13 @@ class App extends Component {
     squares:[
       "First kiss interrupted",
       "Fall in love within a week",
-      "Horse drawn carriage ride",
-      "Sleigh Ride",
+      "Horse drawn carriage/sleigh",
       "Gets dumped in beginning of the movie",
       "Town Christmas festival",
       "Company holiday party",
       "Family Member Deceased",
       "Greedy corporate character",
       "Cookie baking",
-      "Christmas ghost",
       "Blatant product placement", 
       "Someone with a holiday themed name",
       "\"Accidental\" fall that requires help up",
@@ -45,8 +43,12 @@ class App extends Component {
       "Tree Decorating",
       "From a small town",
       "Anti-Christmas Character",
-      "Ex bf/gf trouble",
+      "Ex drama",
       "Family property or business in trouble",
+      "Drinking hot chocolate",
+      `Someone says 'It's a date'`,
+      "Christmas magic"
+
     ],
     squaresToRender: []
   }
@@ -72,8 +74,9 @@ class App extends Component {
           { this.state.squaresToRender.map((square, index) => {
             if( index === 12 )
               return <div className="square selected">Free Space</div>
-                if(index < 25)
+            if(index < 25)
               return <Square>{square}</Square>
+            return null;
           }) }
         </div>
             :
