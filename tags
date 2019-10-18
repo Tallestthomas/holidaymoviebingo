@@ -5,7 +5,6 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 checkValidServiceWorker	src/serviceWorker.js	/^function checkValidServiceWorker(swUrl, config) {$/;"	f
-class.Component.selected	src/components/Square.js	/^    selected: false$/;"	p
-class.squares	src/App.js	/^    squares:[$/;"	p
+class.squaresToRender	src/App.js	/^    squaresToRender: []$/;"	p
 gtag	public/index.html	/^function gtag(){dataLayer.push(arguments);}$/;"	f
 registerValidSW	src/serviceWorker.js	/^function registerValidSW(swUrl, config) {$/;"	f
