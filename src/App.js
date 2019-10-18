@@ -10,7 +10,6 @@ class App extends Component {
       "Christmas beret",
       "Christmas carolers",
       "Christmas magic",
->>>>>>> 8c38b2b1d1a7538ec95fb64bedc18fd995ef90e2
       "Company holiday party",
       "Cookie baking",
       "Crazy snowstorm that shuts down travel",
@@ -59,9 +58,6 @@ class App extends Component {
     this.setState({squaresToRender: array.sort(() => 0.5 - Math.random())});
   }
 
-  sanitizeArray = (array)  => Array.from(new Set(array))
-
-
   componentDidMount(){
     this.shuffleArray(this.state.squares);
   }
@@ -83,7 +79,6 @@ class App extends Component {
             :
             <span>loading...</span>
         }
-        <a href="mailto:holiday.bingo@tomrasmussen.me">Have a square suggestion? Send it to us!</a>
       </div>
     )
   }
