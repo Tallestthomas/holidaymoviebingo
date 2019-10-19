@@ -1,22 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-class Square extends React.Component {
-  state = {
-    selected: false
-  }
+const Square = ({ children }) => {
+  const [selected, setSelected] = useState(false);
 
-  render() {
-    return(
-      <div className={`square ${this.state.selected ? 'selected' : ''}`}
-        onClick={() => {
-          this.props.onClick(); 
-          this.setState({selected: !this.state.selected});
-        }}
-      >
-        {this.props.children}
-      </div>
-    )
-  }
+  return(
+    <div className={`square ${selected ? 'selected' : ''}`}
+      onClick={ () => { setSelected(!selected) }}>
+      { children }
+    </div>
+  );
 }
 
 export default Square;

@@ -38,7 +38,7 @@ a {
 }
 
 .square.selected {
-  background: url("./Snowflake.svg") no-repeat center center;
+  background: url("./assets/Snowflake.svg") no-repeat center center;
   background-size: contain;
 
   color: #008000;
