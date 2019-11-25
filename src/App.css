@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -45,16 +45,15 @@ a {
   text-shadow: 1px 1px white;
 }
 
-img { 
-  transform: rotate(-90deg);
-  max-width:500px;
-  max-height:25vh;
+img {
+  max-width: 500px;
+  max-height: 25vh;
   display: block;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 770px) {
-  body{
+  body {
     font-size: 0.8rem;
   }
 
@@ -72,4 +71,3 @@ img {
     font-size: 0.6rem;
   }
 }
-

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Square from './components/Square';
 import { squares } from './data/squares.json';
+import './App.css'
 
 class App extends Component {
   state = {
@@ -20,11 +21,7 @@ class App extends Component {
 
     return(
       <div className="app">
-<<<<<<< HEAD
-        <img src={require("./image.png")} alt="logo" />
-=======
-        <img src={require("./assets/image.png")} alt="logo" />
->>>>>>> b6adba06182105f942a93934f643357acefa8a7e
+        <img src={require("./assets/image.jpeg")} alt="logo" />
         {squaresToRender ?
         <div className="square-container">
           { squaresToRender.map((square, index) => {
